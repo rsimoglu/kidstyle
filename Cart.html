@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>KidStyle | Количка за пазаруване</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="#" class="header__logo logo">
+          <div>KidStyle</div>
+          <small>Магазин за детски дрехи</small>
+        </a>
+        <nav class="header__nav">
+          <ul>
+            <li><a href="#">Бебета</a></li>
+            <li><a href="#">Момичета</a></li>
+            <li><a href="#">Момчета</a></li>
+            <li><a href="#">Аксесоари</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>    
+
+
+<ul id="cart-list">
+    <!-- Populate this list with the items in the user's cart -->
+  </ul>
+  
+  <script>
+    //!-- Get the user's cart from local storage -->
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+    //!-- Get a reference to the cart list element -->
+    const cartList = document.querySelector('#cart-list');
+  
+    //!-- If the cart is empty, display a message to the user -->
+    if (cart.length === 0) {
+      const li = document.createElement('li');
+      li.textContent = 'Your cart is empty';
+      cartList.appendChild(li);
+    } else {
+      //!-- Iterate over the items in the cart and create a new list item for each item -->
+      cart.forEach(item => {
+        const li = document.createElement('li');
+  
+        //!-- Add the item's information to the list item -->
+        li.textContent = `${item.name} - $${item.price} x ${item.quantity}`;
+  
+        //!-- Append the list item to the cart list element -->
+        cartList.appendChild(li);
+      });
+    }
+  </script>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__logo">Kidz Store</div>
+      <div class="footer__text">
+        <p>1234 Kidz Lane, New York, NY 12345</p>
+        <p>Email: info@kidzstore.com | Phone: 123-456-7890</p>
+      </div>
+      <div class="footer__social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+      <p>&copy; 2023 Kids Clothing Store. All Rights Reserved.</p>
+  </footer>
+
+  </body>
+</html>

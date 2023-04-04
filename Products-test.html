@@ -1,0 +1,114 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>KidStyle | Бебета</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="index.html" class="header__logo logo">
+          <div>KidStyle</div>
+          <small>Магазин за детски дрехи</small>
+        </a>
+        <nav class="header__nav">
+          <ul>
+            <li><a href="#">Бебета</a></li>
+            <li><a href="#">Момичета</a></li>
+            <li><a href="#">Момчета</a></li>
+            <li><a href="#">Аксесоари</a></li>
+          </ul>
+        </nav>
+      </div>
+      <span id="cart-count"></span>
+
+    </header>
+    <main>
+        <div class="filters-container">
+          <section class="filters">
+            <div class="filter-group">
+              <label for="age">Възраст:</label>
+              <select id="age">
+                <option value="">Всички възрасти</option>
+                <option value="newborn">Новородено</option>
+                <option value="0-3">0-3 месеца</option>
+                <option value="3-6">3-6 месеца</option>
+                <option value="6-9">6-9 месеца</option>
+                <option value="9-12">9-12 месеца</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="gender">Пол:</label>
+              <select id="gender">
+                <option value="">Избери пол</option>
+                <option value="boy">Момче</option>
+                <option value="girl">Момиче</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="shoes">Обувки:</label>
+              <input type="checkbox" id="shoes">
+            </div>
+            <div class="filter-group">
+              <label for="clothes">Дрехи:</label>
+              <input type="checkbox" id="clothes">
+            </div>
+          </section>
+        </div>
+        <section class="products-test">
+            <h2>Бебета</h2>
+            <div class="product-items">
+              <div class="product-item">
+                <img src="product-imgs/baby1.jpg" alt="Product 1">
+                <h3>Продукт 1</h3>
+                <p> 15.99 лв</p>
+                <p>Описание на продукта 1.</p>
+                <button class="add-to-cart-btn">Добави в количката</button>
+                 <div class="notification-box">
+                  <p>Product added to cart! <a href="cart.html">View cart</a></p>
+                 </div>
+              </div>
+              <div class="product-item">
+                <img src="product-imgs/baby2.jpg" alt="Product 2">
+                <h3>Продукт 2</h3>
+                <p>27.99 лв</p>
+                <p>Описание на продукта 2.</p>
+                <button class="add-to-cart-btn">Добави в количката</button>
+                 <div class="notification-box">
+                  <p>Product added to cart! <a href="cart.html">View cart</a></p>
+                 </div>
+              </div>
+              <div class="product-item">
+                <img src="product-imgs/baby3.jpg" alt="Product 3">
+                <h3>Продукт 3</h3>
+                <p>7.98 лв</p>
+                <p>Описание на продукта 3.</p>
+                <button class="add-to-cart-btn">Добави в количката</button>
+                 <div class="notification-box">
+                  <p>Product added to cart! <a href="cart.html">View cart</a></p>
+                 </div>
+              </div>
+            </div>
+          </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__logo">Kidz Store</div>
+        <div class="footer__text">
+          <p>1234 Kidz Lane, New York, NY 12345</p>
+          <p>Email: info@kidzstore.com | Phone: 123-456-7890</p>
+        </div>
+        <div class="footer__social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+        <p>&copy; 2023 Kids Clothing Store. All Rights Reserved.</p>
+    </footer>
+
+    </body>
+    </html>
